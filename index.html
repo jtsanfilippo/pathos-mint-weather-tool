@@ -371,11 +371,11 @@ td { padding: 8px; font-size: 11px; font-weight: 400; font-variant-numeric: tabu
   text-transform: uppercase;
   white-space: nowrap;
 }
-.cond-Sunny    { background: rgba(255,193,0,0.12);   color: var(--yellow); }
-.cond-Partly   { background: rgba(89,119,255,0.12);  color: var(--partly); }
-.cond-Overcast { background: rgba(153,163,168,0.12); color: var(--overcast); }
-.cond-Showers  { background: rgba(89,119,255,0.12);  color: var(--partly); }
-.cond-Rainy    { background: rgba(226,45,91,0.12);   color: var(--rainy); }
+.cond-Sunny    { background: rgba(255,193,0,0.22);   color: var(--yellow); }
+.cond-Partly   { background: rgba(153,163,168,0.16); color: var(--overcast); }
+.cond-Overcast { background: rgba(153,163,168,0.16); color: var(--overcast); }
+.cond-Showers  { background: rgba(89,119,255,0.20);  color: var(--showers); }
+.cond-Rainy    { background: rgba(89,119,255,0.28);  color: var(--showers); }
 
 .bar-cell { display: flex; align-items: center; gap: 5px; }
 .mini-bar { height: 6px; border-radius: 2px; opacity: 0.85; min-width: 2px; max-width: 40px; flex-shrink: 0; }
@@ -693,15 +693,15 @@ function renderResults(locKeys) {
       <div class="stat-lbl">Sunny Days</div>
     </div>
     <div class="stat-card" style="background:var(--surface);padding:24px 20px;">
-      <div class="stat-num" style="color:var(--rainy)">${rainy}</div>
+      <div class="stat-num" style="color:var(--showers)">${rainy}</div>
       <div class="stat-lbl">Rainy / Showers</div>
     </div>
     <div class="stat-card" style="background:var(--surface);padding:24px 20px;">
-      <div class="stat-num" style="color:var(--partly)">${avgCloud}%</div>
+      <div class="stat-num" style="color:var(--overcast)">${avgCloud}%</div>
       <div class="stat-lbl">Avg Cloud Cover</div>
     </div>
     <div class="stat-card" style="background:var(--surface);padding:24px 20px;">
-      <div class="stat-num" style="color:var(--pink)">${Math.round(totalPrec)}<span style="font-size:20px;font-weight:400">mm</span></div>
+      <div class="stat-num" style="color:var(--showers)">${Math.round(totalPrec)}<span style="font-size:20px;font-weight:400">mm</span></div>
       <div class="stat-lbl">Total Precip</div>
     </div>
   `;
